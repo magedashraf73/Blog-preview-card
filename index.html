@@ -4,7 +4,12 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <!-- displays site properly based on user's device -->
-
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Figtree:ital,wght@0,300..900;1,300..900&family=Outfit:wght@100..900&display=swap"
+      rel="stylesheet"
+    />
     <link
       rel="icon"
       type="image/png"
@@ -22,22 +27,101 @@
         --grey-500: #6b6b6b;
         --white: #fff;
       }
-
+      * {
+        box-sizing: border-box;
+      }
       body {
+        margin: 0;
+        height: 100vh;
+        font-family: "Figtree", sans-serif;
+        font-optical-sizing: auto;
+        font-weight: 500;
+      }
+      .container {
         background-color: var(--yellow);
+        height: inherit;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 20px;
+      }
+      .blog_card {
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        align-items: center;
+        background-color: var(--white);
+        max-width: 384px;
+        padding: 20px;
+        gap: 20px;
+        border-radius: 20px;
+        border: 1px solid var(--grey-950);
+        box-shadow: 10px 10px var(--grey-950);
+      }
+      .card_body {
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
+        align-items: start;
+      }
+      .learn {
+        background-color: var(--yellow);
+        padding: 4px 12px;
+        border-radius: 4px;
+        color: var(--grey-950);
+        font-weight: bold;
+      }
+      .card_head img {
+        max-width: 100%;
+        border-radius: 10px;
+      }
+      h1 {
+        font-size: 20px;
+        font-weight: 900;
+      }
+      p,
+      h1 {
+        margin: 0px;
+      }
+      .date {
+        color: var(--grey-950);
+      }
+      .auther {
+        display: flex;
+        align-items: center;
+        flex-direction: row;
+        gap: 12px;
+        font-weight: bold;
+      }
+      .auther img {
+        width: 32px;
+        height: 32px;
+      }
+      .content {
+        color: var(--grey-500);
       }
     </style>
   </head>
   <body>
-    Learning Published 21 Dec 2023 HTML & CSS foundations These languages are
-    the backbone of every website, defining structure, content, and
-    presentation. Greg Hooper
-
-    <div class="attribution">
-      Challenge by
-      <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
-        >Frontend Mentor</a
-      >. Coded by <a href="#">Your Name Here</a>.
+    <div class="container">
+      <div class="blog_card">
+        <div class="card_head">
+          <img src="./assets/images/illustration-article.svg" alt="" />
+        </div>
+        <div class="card_body">
+          <span class="learn">Learning</span>
+          <p class="date">published 21 Dec 2023</p>
+          <h1>HTML & CSS foundation</h1>
+          <p class="content">
+            These languages are the backbone of every <br />
+            website, defining structure, content, and presentation.
+          </p>
+          <div class="auther">
+            <img src="./assets/images/image-avatar.webp" alt="" />
+            <span>Greg Hooper</span>
+          </div>
+        </div>
+      </div>
     </div>
   </body>
 </html>
